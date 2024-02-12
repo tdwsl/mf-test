@@ -193,7 +193,12 @@ void asmFile(const char *filename) {
             nmemory += 4;
         } else if(!strcmp(buf, "-if")) {
             memory[nmemory++] = 0x0f;
-            memory[nmemory++] = 0x83;
+            memory[nmemory++] = 0x89;
+            cs[cp++] = nmemory;
+            nmemory += 4;
+        } else if(!strcmp(buf, "+if")) {
+            memory[nmemory++] = 0x0f;
+            memory[nmemory++] = 0x88;
             cs[cp++] = nmemory;
             nmemory += 4;
         } else if(!strcmp(buf, "else")) {

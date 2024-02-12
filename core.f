@@ -18,6 +18,7 @@
 : a!+ { 89 01 83 C1 04 83 EF 04 8B 07 } ;inline
 : a@+ { AB 8B 01 83 C1 04 } ;inline
 : dup { ab } ;inline
+: over { ab 8b 47 f8 } ;inline
 : 1+ { 40 } ;inline
 : 1- { 48 } ;inline
 : ! { 8B 5F FC 89 18 83 EF 08 8B 07 } ;inline
